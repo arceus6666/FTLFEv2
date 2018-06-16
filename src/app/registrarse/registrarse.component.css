@@ -1,0 +1,68 @@
+body {
+  margin: 100px;
+  background-color: black;
+  font-family: verdana;
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    text-align: left;
+}
+
+
+
+p {
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 16px;
+    width: 100%;
+}
+
+.imglines {
+  float: right;
+  padding-right: 100px;
+}
+
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input[type=password]:focus {
+  border: 3px solid #555;
+}
+
+input[type=button] {
+
+    background-color: #4CAF50;
+    width: 10%;
+    border:aquamarine;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
