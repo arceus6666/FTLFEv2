@@ -23,5 +23,4 @@ export class PlaylistService {
 
    return this.http.post(url,data,requestOptions).forEach(res => res.json());
   }
-
 }

@@ -15,6 +15,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PlaylistsComponent } from './playlists/playlists.component';
 import {PlaylistsService} from './playlists/playlists.service';
 import { IniciarSesionService } from './iniciar-sesion/iniciar_sesion.service';
+import { AgregarTarjetaComponent } from './agregar-tarjeta/agregar-tarjeta.component';
+import { MostrarCancinnComponent } from './mostrar-cancinn/mostrar-cancinn.component';
+import { VisualizacionResultadosComponent } from './visualizacion-resultados/visualizacion-resultados.component';
+import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { IniciarSesionService } from './iniciar-sesion/iniciar_sesion.service';
     MostrarUsuarioComponent,
     EditarUsuarioComponent,
     WelcomeComponent,
-    PlaylistsComponent
+    PlaylistsComponent,
+    AgregarTarjetaComponent,
+    MostrarCancinnComponent,
+    VisualizacionResultadosComponent,
+    MostrarCancionComponent
   ],
   imports: [
     BrowserModule,
