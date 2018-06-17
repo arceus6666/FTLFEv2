@@ -24,28 +24,55 @@ p {
 }
 
 input[type=text] {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type= number] {
+  width: 7%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 }
 
 input[type=text]:focus {
-    border: 3px solid #555;
+  border: 3px solid #555;
+}
+
+input[type=password]:focus {
+  border: 3px solid #555;
 }
 
 input[type=button] {
-    background-color: #4CAF50;
-    width: 10%;
-    border:aquamarine;
-    text-align: center;
-    color: white;
-    padding: 6px 12px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
+  background-color: #4CAF50;
+  width: 200px;
+  height: 50px;
+  border:aquamarine;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }

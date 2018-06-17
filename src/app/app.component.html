@@ -3,13 +3,15 @@
 <div class="topnav">
   <div class="title topnava1">FlameTuneLibrary</div>
   <a class="topnava1" routerLink="/welcome">Welcome</a>
+
+  <button type="button" value="logout" class="button textcol topnava2" (click)="save($event)" >
+    <a routerLink="/welcome">Cerrar Sesion</a>
+  </button>
+
   <a class="topnava2" routerLink="/registrarse">Registrarse</a>
   <a class="topnava2" routerLink="/iniciar_sesion">Iniciar Sesion</a>
-  <a class="topnava2" routerLink="/editar_usuario">Editar Profile</a>
   <a class="topnava2" routerLink="/mostrar_usuario">MyProfile</a>
   <a class="topnava2" routerLink="/playlists">Playlists</a>
-  <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
-  <a class="topnava2" routerLink="/mostrar_cancion">Mostrar Cancion</a>
   <a class="topnava2" routerLink="/visualizacion_resultados">Busqueda</a>
   <a class="topnava2" routerLink="/comprar_membresias">Comprar Membresia</a>
   <input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" />
@@ -18,6 +20,7 @@
     <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
   </button>
 
+  <a class="topnava2" routerLink="/membresias">Memberships</a>
 </div>
 
 <router-outlet></router-outlet>

@@ -6,7 +6,8 @@ import { MostrarUsuarioComponent} from '../mostrar-usuario/mostrar-usuario.compo
 
 @Component({
   selector: 'app-iniciar-sesion',
-  templateUrl: './iniciar-sesion.component.html'
+  templateUrl: './iniciar-sesion.component.html',
+  styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
   data_nombre_usr:any;
@@ -39,13 +40,11 @@ export class IniciarSesionComponent implements OnInit {
       }
     );
 
-    //console.log('id??: ' + this.dataTest.id);
-    //console.log('globalid: ' + this.global.getID())
-    //this.mostrar.set();
-    
+    this.global.saveLog(this.dataTest.id);
+
   }
 
   ngOnInit() {
   }
-  
+
 }
