@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PlaylistsService} from './playlists.service';
+import { GlobalService } from '../global.service'
 
 @Component({
   selector: 'app-playlists',
@@ -17,7 +18,7 @@ export class PlaylistsComponent implements OnInit {
   data_tipo_acceso_playlist: any;
   data_nomlinew:any;
 
-  constructor(private serviciod: PlaylistsService) { }
+  constructor(private serviciod: PlaylistsService,private global: GlobalService) { }
 
   save(event) {
     event.preventDefault();
@@ -28,7 +29,7 @@ export class PlaylistsComponent implements OnInit {
       "tipo_acceso_playlist": this.data_tipo_acceso_playlist
     } 
 
-    this.serviciod.crearPlaylist(this.data_id, newList);
+    this.serviciod.crearPlaylist(this.global.getID(), newList);
   }
 
   delete(event) {

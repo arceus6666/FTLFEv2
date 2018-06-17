@@ -14,7 +14,7 @@
   <a class="topnava2" routerLink="/comprar_membresias">Comprar Membresia</a>
   <input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" />
   <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_id)" />
-  <button type="button" value="logout" class="btn btn-primary btn-block" (click)="save($event)" >
+  <button type="button" value="logout" class="btn btn-primary btn-block" (click)="clear()" >
     <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
   </button>
 

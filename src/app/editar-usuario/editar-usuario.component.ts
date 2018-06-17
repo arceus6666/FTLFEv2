@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EditarUsuarioService } from './editar_usuario.service';
+import { GlobalService } from '../global.service'
 
 @Component({
   selector: 'app-editar-usuario',
@@ -17,12 +18,13 @@ export class EditarUsuarioComponent implements OnInit {
   data_numero_tarjeta:any;
   imageUrl: string = "";
   fileToUpload: File = null;
-  constructor(private serviciod : EditarUsuarioService) { }
-  update(event, id) {
+  constructor(private serviciod : EditarUsuarioService,
+  private global: GlobalService) { }
+  update(event) {
 
     event.preventDefault();
     var newUsuario={
-      "id":this.data_id,
+      "id":this.global.getID(),
       "correo":this.data_correo,
       "password":this.data_password,
       "nombre_usr":this.data_nombre_usr,
@@ -31,7 +33,7 @@ export class EditarUsuarioComponent implements OnInit {
       "fecha_inicio_membresia":null,
       "numero_tarjeta":null
     }
-    this.serviciod.editarUsuario(this.data_id, newUsuario);
+    this.serviciod.editarUsuario(this.global.getID(), newUsuario);
     //this.cargar()
   }
 

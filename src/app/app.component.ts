@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GlobalService } from './global.service';
+import { LogoutService } from './logout.service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,13 @@ import { GlobalService } from './global.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private global: GlobalService){}
+  constructor(private global: GlobalService, private close: LogoutService){}
   
   title = 'app';
 
   clear(){
     this.global.clear();
+    this.close.cerrarSesion();
   }
   
 }

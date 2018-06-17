@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AgregarTarjetaService } from './agregar-tarjeta.service';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-agregar-tarjeta',
@@ -8,7 +9,8 @@ import { AgregarTarjetaService } from './agregar-tarjeta.service';
 })
 export class AgregarTarjetaComponent implements OnInit {
 
-  constructor(private serviciod: AgregarTarjetaService) { }
+  constructor(private serviciod: AgregarTarjetaService
+  ,private global:GlobalService) { }
   data_id:any;
   data_nro_tarjeta:any;
   data_cvc_tarjeta:any;
@@ -28,7 +30,7 @@ export class AgregarTarjetaComponent implements OnInit {
       "nombre_usuario_tarjeta": this.data_nombre_usuario_tarjeta
     } 
 
-    this.serviciod.anadirTarjeta(this.data_id, newTarjeta);
+    this.serviciod.anadirTarjeta(this.global.getID(), newTarjeta);
   }
 
   ngOnInit() {
