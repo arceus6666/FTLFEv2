@@ -4,7 +4,7 @@ import { MostrarCancionService } from './mostrar-cancion.service';
 @Component({
   selector: 'app-mostrar-cancion',
   template: `<div class="login">
-  <h1>Cancion</h1>
+  <h1 class="wel">Cancion</h1>
   ID<input type="text" [(ngModel)]="data_id_cancion" name="u" placeholder="id_cancion" required="required" />
   <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_id_cancion)" />
   <br>  Cancion  <br>

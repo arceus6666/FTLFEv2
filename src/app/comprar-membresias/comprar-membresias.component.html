@@ -1,12 +1,13 @@
 <body class="comp">
 
 <div class="centerme">
-<h1>Thanks for your purchase!!!</h1><br>
+  <br><br>
+<h1 class="wel" >Thanks for your purchase!!!</h1><br>
 <h5>Please indicate the number of memberships you wish to adquire,<br>read carefully and press the button to make the deal!</h5>
 <br><br>
 Cantidad Membresias<br>
-<input type="number" step="1"[(ngModel)]="data_cantidad_membresias" name="u" placeholder="Ej.:1" required="required" />
-<input type="button" value="Comprar Membresia" class="btn btn-primary btn-block centerme" (click)="update($event)" />
+<input type="number" step="1"[(ngModel)]="data_cantidad_membresias" name="u" placeholder="Ej.:1" required="required" /><br>
+<input type="button" value="Comprar Membresia" class="button" (click)="update($event)" />
 </div>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
