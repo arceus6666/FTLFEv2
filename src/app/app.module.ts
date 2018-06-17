@@ -25,6 +25,7 @@ import {GlobalService}from './global.service';
 import { ComprarMembresiasComponent } from './comprar-membresias/comprar-membresias.component'
 import { ComprarMembresiaService } from './comprar-membresias/comprar-membresias.service';
 import { LogoutService } from './logout.service';
+import { MembresiasComponent } from './membresias/membresias.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LogoutService } from './logout.service';
     AgregarTarjetaComponent,
     VisualizacionResultadosComponent,
     MostrarCancionComponent,
-    ComprarMembresiasComponent
+    ComprarMembresiasComponent,
+    MembresiasComponent
   ],
   imports: [
     BrowserModule,
@@ -88,12 +90,15 @@ import { LogoutService } from './logout.service';
       {
         path:'comprar_membresias',
         component:ComprarMembresiasComponent
+      }, {
+        path:'membresias',
+        component:MembresiasComponent
       }
     ])
   ],
   providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService,ComprarMembresiaService,LogoutService],
   bootstrap: [AppComponent]
-  
+
 
 })
 export class AppModule { }
