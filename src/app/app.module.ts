@@ -18,6 +18,7 @@ import { IniciarSesionService } from './iniciar-sesion/iniciar_sesion.service';
 import { AgregarTarjetaComponent } from './agregar-tarjeta/agregar-tarjeta.component';
 import { VisualizacionResultadosComponent } from './visualizacion-resultados/visualizacion-resultados.component';
 import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.component';
+import { VisualizacionResultadosService } from './visualizacion-resultados/visualizacion-resultados.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,6 @@ import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.compo
     WelcomeComponent,
     PlaylistsComponent,
     AgregarTarjetaComponent,
-   
     VisualizacionResultadosComponent,
     MostrarCancionComponent
   ],
@@ -61,10 +61,19 @@ import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.compo
       {
         path:'playlists',
         component:PlaylistsComponent
+      },
+      {
+        path:'busqueda',
+        component: VisualizacionResultadosComponent
+      },
+      {
+        path:'mostrar_cancion',
+        component: MostrarCancionComponent
       }
+
     ])
   ],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,VisualizacionResultadosService,MostrarCancionComponent],
   bootstrap: [AppComponent]
 
 })

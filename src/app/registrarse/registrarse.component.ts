@@ -29,11 +29,11 @@ export class RegistrarseComponent implements OnInit {
       "url_foto_usr":null,
       "cantidad_membresias":0,
       "fecha_inicio_membresia":null,
-      "numero_tarjeta":null,
+      "numero_tarjeta":null
     }
     this.serviciod.registrarUsuario(newUsuario);
   
-  }
+  } 
   ngOnInit() {
   }
 

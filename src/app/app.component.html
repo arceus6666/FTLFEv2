@@ -9,6 +9,9 @@
   <a class="topnava2" routerLink="/mostrar_usuario">MyProfile</a>
   <a class="topnava2" routerLink="/playlists">Playlists</a>
   <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
+  <a class="topnava2" routerLink="/mostrar_cancion">Mostrar Cancion</a>
+  <input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" />
+  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_id)" />
 </div>
 
 <router-outlet></router-outlet>
