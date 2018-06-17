@@ -81,8 +81,7 @@ import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service
     ])
   ],
   providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,
-    PlaylistsService,IniciarSesionService, GlobalService],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,VisualizacionResultadosService],
+    PlaylistsService,IniciarSesionService, GlobalService,MostrarCancionService,VisualizacionResultadosService],
   bootstrap: [AppComponent]
 
 })
