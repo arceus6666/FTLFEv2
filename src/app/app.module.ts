@@ -24,6 +24,7 @@ import { AgregarTarjetaService } from './agregar-tarjeta/agregar-tarjeta.service
 import {GlobalService}from './global.service';
 import { ComprarMembresiasComponent } from './comprar-membresias/comprar-membresias.component'
 import { ComprarMembresiaService } from './comprar-membresias/comprar-membresias.service';
+import { MembresiasComponent } from './membresias/membresias.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ComprarMembresiaService } from './comprar-membresias/comprar-membresias
     AgregarTarjetaComponent,
     VisualizacionResultadosComponent,
     MostrarCancionComponent,
-    ComprarMembresiasComponent
+    ComprarMembresiasComponent,
+    MembresiasComponent
   ],
   imports: [
     BrowserModule,
