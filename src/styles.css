@@ -28,6 +28,15 @@ body.log {
   font-family: verdana;
 }
 
+body.memb {
+  margin: 0;
+  background-image: url("resources\background10.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: verdana;
+}
+
 h1.wel {
   text-align: center;
   color: white;
@@ -73,12 +82,43 @@ h4.wel{
   text-decoration: none;
 }
 
+.topnav2 {
+  background-color: #111111;
+  height: 40px;
+}
+
+.topnava3 {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 /*PARA NAVIGATION BAR*/
 /* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
+
+.button2 {
+  background-color: darkblue; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
 
 .button {
   background-color: blue; /* Green */
@@ -97,7 +137,7 @@ h4.wel{
 }
 
 .buttonwel:hover {
-  background-color: cyan;
+  background-color: cornflowerblue;
   color: black;
   border: 2px solid white;
   border-radius: 12px;
@@ -115,14 +155,26 @@ h2.log {
   font-size: 25px;
 }
 
-.box {
+.box1 {
   background-color: darkblue;
-  width: 600px;
+  width: 400px;
   border: cyan;
   padding: 25px;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 }
+
+.box2 {
+  background-color: cornflowerblue;
+  width: 400px;
+  border: cyan;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
 
 input[type=text] {
   width: 30%;
@@ -183,4 +235,8 @@ input[type=submit]:hover {
 
 .disabled {
   cursor: not-allowed;
+}
+
+.dispi {
+  display: inline-block;
 }

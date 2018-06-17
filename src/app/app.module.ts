@@ -89,12 +89,15 @@ import { MembresiasComponent } from './membresias/membresias.component';
       {
         path:'comprar_membresias',
         component:ComprarMembresiasComponent
+      }, {
+        path:'membresias',
+        component:MembresiasComponent
       }
     ])
   ],
   providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService,ComprarMembresiaService],
   bootstrap: [AppComponent]
-  
+
 
 })
 export class AppModule { }
