@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
-import { BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
+import{FormsModule} from '@angular/forms';
+import {BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
 import { AppComponent } from './app.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
@@ -19,6 +19,8 @@ import { AgregarTarjetaComponent } from './agregar-tarjeta/agregar-tarjeta.compo
 import { VisualizacionResultadosComponent } from './visualizacion-resultados/visualizacion-resultados.component';
 import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.component';
 import {GlobalService} from './global.service';
+import { VisualizacionResultadosService } from './visualizacion-resultados/visualizacion-resultados.service';
+import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import {GlobalService} from './global.service';
     WelcomeComponent,
     PlaylistsComponent,
     AgregarTarjetaComponent,
+
     VisualizacionResultadosComponent,
     MostrarCancionComponent
   ],
@@ -49,23 +52,37 @@ import {GlobalService} from './global.service';
     {
       path:'mostrar_usuario',
       component: MostrarUsuarioComponent
-    },
-    {
-      path:'welcome',
-      component: WelcomeComponent
-    },
-    {
+     },
+      {
+        path:'welcome',
+        component: WelcomeComponent
+      },
+     {
       path:'editar_usuario',
       component:EditarUsuarioComponent
-    },
-    {
-      path:'playlists',
-      component:PlaylistsComponent
-    }
+     },
+      {
+        path:'playlists',
+        component:PlaylistsComponent
+      },
+      {
+        path:'busqueda',
+        component: VisualizacionResultadosComponent
+      },
+      {
+        path:'mostrar_cancion',
+        component: MostrarCancionComponent
+      },
+      {
+        path:'visualizacion_resultados',
+        component:VisualizacionResultadosComponent
+      }
+
     ])
   ],
   providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,
     PlaylistsService,IniciarSesionService, GlobalService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,VisualizacionResultadosService],
   bootstrap: [AppComponent]
 
 })
