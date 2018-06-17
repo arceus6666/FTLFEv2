@@ -8,14 +8,19 @@ import { VisualizacionResultadosService } from './visualizacion-resultados.servi
   Buscar<input type="text" [(ngModel)]="data_texto" name="u" placeholder="texto" required="required" />
   <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_texto)" />
   <br>  Canciones  <br>
-  <br>Id Cancion : {{dataTest.id_cancion}}
-  <br>Nombre Cancion: {{dataTest.nombre_cancion}}
-  <br>Genero:  {{dataTest.genero}}
-  <br>Artista:  {{dataTest.artista}}
-  <br>Album:  {{dataTest.album}}
-  <br>Año Cancion:  {{dataTest.anio_cancion}}
-  <br>Ranking Personal:  {{dataTest.ranking_personal}}
-  <br>URL Cancion:  {{dataTest.url_cancion}}
+  <table class="table">
+  <tr *ngFor="let dataTest of dataTest; let i = index">
+  <td>{{i + 1}}</td>
+  <td>{{dataTest.id_cancion}}</td> 
+  <td>{{dataTest.nombre_cancion}}</td>  
+  <td>{{dataTest.genero}}</td> 
+  <td>{{dataTest.artista}}</td> 
+  <td>{{dataTest.album}} </td> 
+  <td>{{dataTest.anio_cancion}}</td>
+  <td>{{dataTest.ranking_personal}}</td> 
+  <td>{{dataTest.url_cancion}}</td>
+  </tr>
+  </table>
 </div>`
 })
 export class VisualizacionResultadosComponent implements OnInit {
