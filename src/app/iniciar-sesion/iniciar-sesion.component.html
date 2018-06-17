@@ -6,8 +6,8 @@
     <p>Espanglish is el new hit del year!!! :v<br>That's why si tu can entender this<br>you puedes sign in tambien!</p>
   </div>
   <h1>Iniciar Sesion</h1>
-  Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="nombre_usr" required="required" /><br>
-  Password<input type="text" [(ngModel)]="data_password" name="u" placeholder="password" required="required" /><br>
-  <input type="button" value="Iniciar Sesion" class="btn btn-primary btn-block" (click)="iniciar($event, this.data_nombre_usr,this.data_password)" />
+  Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="Usuario" required="required" /><br>
+  Password<input type="text" [(ngModel)]="data_password" name="u" placeholder="Password" required="required" /><br>
+  <input type="button" value="Iniciar Sesion" class="btn btn-primary btn-block" (click)="iniciar($event, this.data_nombre_usr,this.data_password)" routerLink="/mostrar_usuario"/>
 </div>
 </body>

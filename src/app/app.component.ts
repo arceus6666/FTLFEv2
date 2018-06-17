@@ -9,12 +9,15 @@ import { LogoutService } from './logout.service';
 })
 export class AppComponent {
   constructor(private global: GlobalService, private close: LogoutService){}
-  
   title = 'app';
 
   clear(){
     this.global.clear();
     this.close.cerrarSesion();
+  }
+
+  getLogged(){
+    return this.global.getlog()
   }
   
 }

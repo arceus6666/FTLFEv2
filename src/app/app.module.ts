@@ -13,7 +13,7 @@ import { EditarUsuarioService } from './editar-usuario/editar_usuario.service';
 import { MostrarUsuarioService } from './mostrar-usuario/mostrar-usuario.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PlaylistsComponent } from './playlists/playlists.component';
-import {PlaylistsService} from './playlists/playlists.service';
+import { PlaylistsService } from './playlists/playlists.service';
 import { IniciarSesionService } from './iniciar-sesion/iniciar_sesion.service';
 import { AgregarTarjetaComponent } from './agregar-tarjeta/agregar-tarjeta.component';
 import { VisualizacionResultadosComponent } from './visualizacion-resultados/visualizacion-resultados.component';

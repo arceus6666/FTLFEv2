@@ -72,6 +72,7 @@ export class GlobalService {
 
 
   /*
+  
   correo_usuario
   password_usuario
   nombre_usuario

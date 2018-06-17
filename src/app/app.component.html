@@ -1,22 +1,36 @@
 <link href="https://fonts.googleapis.com/css?family=Audiowide|Luckiest+Guy" rel="stylesheet">
+<!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script-->
+
 
 <div class="topnav">
-  <div class="title topnava1">FlameTuneLibrary</div>
-  <a class="topnava1" routerLink="/welcome">Welcome</a>
+  <div class="title topnava1">
+    <div *ngIf="!getLogged(); else notLogged">
+      <a class="topnava1" routerLink="/welcome">FlameTuneLibrary</a>
+    </div>
+    <ng-template #notLogged>
+        <a class="topnava1">FlameTuneLibrary</a>
+    </ng-template>
+  </div>
 
-  <button type="button" value="logout" class="buttonlog textcol topnava2" onclick="alert('Bye Bye!!!')" (click)="clear()" >
-    <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
-  </button>
-
-  <a class="topnava2" routerLink="/registrarse">Registrarse</a>
-  <a class="topnava2" routerLink="/iniciar_sesion">Iniciar Sesion</a>
-  <a class="topnava2" routerLink="/mostrar_usuario">MyProfile</a>
-  <a class="topnava2" routerLink="/playlists">Playlists</a>
-  <a class="topnava2" routerLink="/visualizacion_resultados">Busqueda</a>
-  <a class="topnava2" routerLink="/comprar_membresias">Comprar Membresia</a>
-  <a class="topnava2" routerLink="/membresias">Memberships</a>
+  <div *ngIf="getLogged()">    
+    <a class="topnava2" routerLink="/welcome" onclick="alert('Bye Bye!!!')" (click)="clear()">Cerrar Sesion</a>
+  </div>
+  <div *ngIf="!getLogged()">
+    <a class="topnava2" routerLink="/registrarse">Registrarse</a>
+  </div>
+  <div *ngIf="!getLogged()">
+    <a class="topnava2" routerLink="/iniciar_sesion">Iniciar Sesion</a>
+  </div>
+  <div *ngIf="getLogged()">
+    <a class="topnava2" routerLink="/mostrar_usuario">Mi Perfil</a>
+  </div>
+  <div *ngIf="getLogged()">
+    <a class="topnava2" routerLink="/playlists">Playlists</a>
+  </div>
+  <div *ngIf="getLogged()">
+    <a class="topnava2" routerLink="/visualizacion_resultados">Busqueda</a>
+  </div>
+  <a class="topnava2" routerLink="/membresias">Membresías</a>
 </div>
-
-
 
 <router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+body.welc {
+  margin: 0;
+  background-image: url("resources\flames1.gif"), url("resources\background1.gif");
+  background-repeat: repeat-x, no-repeat;
+  background-attachment: fixed;
+  background-position: bottom, center;
+  font-family: verdana;
+  position: relative;
+  bottom: -40px;
+}

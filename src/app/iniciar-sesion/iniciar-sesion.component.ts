@@ -40,7 +40,7 @@ export class IniciarSesionComponent implements OnInit {
       }
     );
 
-    this.global.saveLog(this.dataTest.id);
+    //this.global.saveLog(this.dataTest.id);
 
   }
 
