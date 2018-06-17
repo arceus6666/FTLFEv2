@@ -23,6 +23,7 @@ import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service
 import { AgregarTarjetaService } from './agregar-tarjeta/agregar-tarjeta.service';
 import {GlobalService}from './global.service';
 import { ComprarMembresiasComponent } from './comprar-membresias/comprar-membresias.component'
+import { ComprarMembresiaService } from './comprar-membresias/comprar-membresias.service';
 
 @NgModule({
   declarations: [
@@ -82,11 +83,16 @@ import { ComprarMembresiasComponent } from './comprar-membresias/comprar-membres
       {
         path:'agregar_tarjeta',
         component:AgregarTarjetaComponent
+      },
+      {
+        path:'comprar_membresias',
+        component:ComprarMembresiasComponent
       }
     ])
   ],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService,ComprarMembresiaService],
   bootstrap: [AppComponent]
+  
 
 })
 export class AppModule { }
