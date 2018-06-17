@@ -8,7 +8,7 @@ import { GlobalService } from '../global.service'
   <h1>MyProfile</h1>
   <!--name<input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" /-->
   <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="set()" />
-  <br>  Usuario  <br>
+  <br>Usuario  <br>
   <br>Nombre: {{dataTest.nombre_usr}}
   <br>Correo: {{dataTest.correo}}
   <br>UserPicture: <img src="{{dataTest.url_foto_usr}}">
@@ -33,8 +33,8 @@ export class MostrarUsuarioComponent implements OnInit {
   constructor(private serviciod: MostrarUsuarioService,
     private global: GlobalService){}
   cx = 'ss';
-  
-  
+
+
   set() {
     //console.log(this.global.getID())
     this.serviciod.getUsuario(this.global.getID()).subscribe(

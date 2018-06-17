@@ -3,26 +3,8 @@ import { VisualizacionResultadosService } from './visualizacion-resultados.servi
 
 @Component({
   selector: 'app-visualizacion-resultados',
-  template:`<div class="login">
-  <h1>Canciones</h1>
-  Buscar<input type="text" [(ngModel)]="data_texto" name="u" placeholder="texto" required="required" />
-  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_texto)" />
-  <br>  Canciones  <br>
-  <table class="table">
-  <tr *ngFor="let dataTest of dataTest; let i = index">
-  <td>{{i + 1}}</td>
-  <td>{{dataTest.id_cancion}}</td> 
-  <td>{{dataTest.nombre_cancion}}</td>  
-  <td>{{dataTest.genero}}</td> 
-  <td>{{dataTest.artista}}</td> 
-  <td>{{dataTest.album}} </td> 
-  <td>{{dataTest.anio_cancion}}</td>
-  <td>{{dataTest.ranking_personal}}</td> 
-  <td>{{dataTest.url_cancion}}</td>
-  <input type="button" value="obtener" />
-  </tr>
-  </table>
-</div>`
+  templateUrl: './visualizacion-resultados.component.html',
+  styleUrls: ['./visualizacion-resultados.component.css']
 })
 export class VisualizacionResultadosComponent implements OnInit {
   data_texto:any;

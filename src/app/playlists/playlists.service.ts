@@ -8,7 +8,7 @@ export class PlaylistsService {
 
   constructor(
     private http: Http) {}
-  
+
   updatePlaylist(id, newList) {
     let url = `http://localhost:8000/FlameTuneLibrary/playlist/update/${id}`;
     let data = JSON.stringify(newList);
@@ -51,4 +51,6 @@ crearPlaylist(id, newList) {
     });
     return this.http.delete(url,requestOptions).forEach(res => res.json());
   }
+
+
 }

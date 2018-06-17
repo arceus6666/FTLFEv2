@@ -1,5 +1,18 @@
 <body class="reg">
 <div class="playlists">
+
+  <h1>Canciones</h1>
+  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event)" />
+  <br>  Canciones  <br>
+  <table class="table">
+    <tr *ngFor="let dataTest of dataTest; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{dataTest.id_playlist}}</td>
+      <td>{{dataTest.nombre_playlist}}</td>
+      <input type="button" value="obtener" />
+    </tr>
+  </table>
+
   <h1>
     Playlists
   </h1>

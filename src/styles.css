@@ -37,6 +37,25 @@ body.memb {
   font-family: verdana;
 }
 
+body.bus {
+  margin: 0;
+  background-image: url("resources\skullflame.gif");
+  font-family: verdana;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+body.comp {
+  margin: 0;
+  background-image: url("resources\background11.jpg");
+  font-family: verdana;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+
+
 h1.wel {
   text-align: center;
   color: white;
@@ -108,6 +127,22 @@ h4.wel{
   display: inline-block;
   font-size: 10px;
   margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.buttonlog {
+  background-color: darkblue; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px 1px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
@@ -234,4 +269,8 @@ input[type=submit]:hover {
 
 .dispi {
   display: inline-block;
+}
+
+.inv {
+  display: none;
 }

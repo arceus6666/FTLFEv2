@@ -1,0 +1,19 @@
+<body class="bus">
+
+
+<h1>Music Library</h1>
+  Buscar<input type="text" [(ngModel)]="data_texto" name="u" placeholder="What are you looking for?" required="required" />
+  <input type="button2" value="Search" class="btn btn-primary btn-block" (click)="get($event, this.data_texto)" />
+  <br><br>  Results  <br>
+  <table class="table">
+    <tr *ngFor="let dataTest of dataTest; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{dataTest.nombre_cancion}}</td>
+      <td>{{dataTest.genero}}</td>
+      <td>{{dataTest.artista}}</td>
+      <td>{{dataTest.album}} </td>
+      <button class="button2"><a routerLink="/mostrar_cancion">More</a></button>
+    </tr>
+  </table>
+<br><br><br><br><br><br><br><br><br><br>
+</body>
