@@ -21,6 +21,7 @@ import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.compo
 import { VisualizacionResultadosService } from './visualizacion-resultados/visualizacion-resultados.service';
 import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service';
 import { AgregarTarjetaService } from './agregar-tarjeta/agregar-tarjeta.service';
+import {GlobalService}from './global.service'
 
 @NgModule({
   declarations: [
@@ -82,7 +83,7 @@ import { AgregarTarjetaService } from './agregar-tarjeta/agregar-tarjeta.service
       }
     ])
   ],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,VisualizacionResultadosService,AgregarTarjetaService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService],
   bootstrap: [AppComponent]
 
 })
