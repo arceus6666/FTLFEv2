@@ -4,6 +4,7 @@ import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Observable} from "rxjs/internal/Observable";
 import { GlobalService } from './global.service';
 
+
 @Injectable()
 export class LogoutService {
 
@@ -29,6 +30,6 @@ export class LogoutService {
 
   ngOnInit(){
   }
-      
-   
+
+
 }
