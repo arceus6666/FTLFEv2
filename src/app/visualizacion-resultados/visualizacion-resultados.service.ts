@@ -22,7 +22,7 @@ export class VisualizacionResultadosService {
         headers: headers,
         body: data
       });
-      return this.http.get(url,{observe:'response'})
+      return this.http.get(url,{observe:'response'});
     }
 
     ngOnInit() {
