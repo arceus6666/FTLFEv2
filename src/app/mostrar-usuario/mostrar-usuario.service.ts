@@ -22,6 +22,7 @@ export class MostrarUsuarioService {
         headers: headers,
         body: data
       });
+      console.log('data: '+data)
       return this.http.get(url,{observe:'response'})
     }
 

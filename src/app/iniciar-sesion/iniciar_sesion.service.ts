@@ -9,20 +9,24 @@ export class IniciarSesionService {
   constructor(
     private http: Http) {}
 
-  iniciarSesion(log) {
-    let url = `http://localhost:8000/FlameTuneLibrary/usuarios/login/${log.name}/${log.pass}`;
-    let data = url
+  iniciarSesion(log): Observable<HttpResponse<any>> {
+    console.log('iniciarSesion called')
+    let url = `http://localhost:8000/FlameTuneLibrary/usuarios/login`;
+    let data = log;
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    headers.append('Access-Control-Allow-Origin', '*');
+    //headers.append('Access-Control-Allow-Origin', '*');
     let requestOptions = new RequestOptions({
       method: RequestMethod.Post,
       url: url,
       headers: headers,
       body: data
     });
-    return this.http.post(url,data,requestOptions).forEach(res => res.json());
+    return this.http.post(url,data,{observe:'response'}/*requestOptions*/);
+  }
+
+  ngOnInit(){
   }
       
    

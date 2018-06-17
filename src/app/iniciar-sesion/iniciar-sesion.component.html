@@ -8,7 +8,7 @@
   </div>
   Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="nombre_usr" required="required" /><br>
   Password<input type="text" [(ngModel)]="data_password" name="u" placeholder="password" required="required" /><br>
-  <input type="button" value="Iniciar Sesion" class="btn btn-primary btn-block" (click)="iniciar($event)" />
+  <input type="button" value="Iniciar Sesion" class="btn btn-primary btn-block" (click)="iniciar($event, this.data_nombre_usr,this.data_password)" />
 
 </div>
 </body>

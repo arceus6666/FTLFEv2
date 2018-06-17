@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
-import{FormsModule} from '@angular/forms';
-import {BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
+import {FormsModule} from '@angular/forms';
+import { BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
 import { AppComponent } from './app.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
@@ -18,6 +18,7 @@ import { IniciarSesionService } from './iniciar-sesion/iniciar_sesion.service';
 import { AgregarTarjetaComponent } from './agregar-tarjeta/agregar-tarjeta.component';
 import { VisualizacionResultadosComponent } from './visualizacion-resultados/visualizacion-resultados.component';
 import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.component';
+import {GlobalService} from './global.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,6 @@ import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.compo
     WelcomeComponent,
     PlaylistsComponent,
     AgregarTarjetaComponent,
-   
     VisualizacionResultadosComponent,
     MostrarCancionComponent
   ],
@@ -49,22 +49,23 @@ import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.compo
     {
       path:'mostrar_usuario',
       component: MostrarUsuarioComponent
-     },
-      {
-        path:'welcome',
-        component: WelcomeComponent
-      },
-     {
+    },
+    {
+      path:'welcome',
+      component: WelcomeComponent
+    },
+    {
       path:'editar_usuario',
       component:EditarUsuarioComponent
-     },
-      {
-        path:'playlists',
-        component:PlaylistsComponent
-      }
+    },
+    {
+      path:'playlists',
+      component:PlaylistsComponent
+    }
     ])
   ],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,
+    PlaylistsService,IniciarSesionService, GlobalService],
   bootstrap: [AppComponent]
 
 })

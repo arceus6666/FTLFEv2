@@ -5,20 +5,19 @@ import { MostrarUsuarioService } from './mostrar-usuario.service';
   selector: 'app-mostrar-usuario',
   template: `<div class="login">
   <h1>MyProfile</h1>
-  name<input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" />
-  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_id)" />
+  <!--name<input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" /-->
+  <!--input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_id)" /-->
   <br>  Usuario  <br>
-    <br>UserPicture:  <img src="{{dataTest.url_foto_usr}}">
-  <br>Id : {{dataTest.id}}
+  <br>UserPicture: <img src="{{dataTest.url_foto_usr}}">
+  <br>Id: {{dataTest.id}}
   <br>Correo: {{dataTest.correo}}
-  <br>Password:  {{dataTest.password}}
-  <br>Nombre:  {{dataTest.nombre_usr}}
-  <br>Cantidad Membresias:  {{dataTest.cantidad_membresias}}
-  <br>Fecha Inicio Membresias:  {{dataTest.fecha_inicio_membresia}}
-  <br>Numero Tarjeta:  {{dataTest.numero_tarjeta}}
+  <br>Password: {{dataTest.password}}
+  <br>Nombre: {{dataTest.nombre_usr}}
+  <br>Cantidad Membresias: {{dataTest.cantidad_membresias}}
+  <br>Fecha Inicio Membresias: {{dataTest.fecha_inicio_membresia}}
+  <br>Numero Tarjeta: {{dataTest.numero_tarjeta}}
   <br><br><button class="button"><a class="colorwhite" routerLink="/editar_usuario">Editar</a></button>
 </div>`
-
 })
 export class MostrarUsuarioComponent implements OnInit {
 

@@ -8,7 +8,10 @@
   <a class="topnava2" routerLink="/editar_usuario">Editar Profile</a>
   <a class="topnava2" routerLink="/mostrar_usuario">MyProfile</a>
   <a class="topnava2" routerLink="/playlists">Playlists</a>
-  <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
+  <button type="button" value="logout" class="btn btn-primary btn-block" (click)="save($event)" >
+    <a class="topnava2" routerLink="/welcome">Cerrar Sesion</a>
+  </button>
+
 </div>
 
 <router-outlet></router-outlet>

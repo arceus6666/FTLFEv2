@@ -17,8 +17,8 @@ export class RegistrarseComponent implements OnInit {
   data_fecha_inicio_membresia:any;
   data_numero_tarjeta:any;
   constructor(private serviciod: RegistrarseService) { }
-  
-  
+
+
   save(event) {
     event.preventDefault();
     var newUsuario={
@@ -29,10 +29,10 @@ export class RegistrarseComponent implements OnInit {
       "url_foto_usr":null,
       "cantidad_membresias":0,
       "fecha_inicio_membresia":null,
-      "numero_tarjeta":null,
+      "numero_tarjeta":null
     }
     this.serviciod.registrarUsuario(newUsuario);
-  
+
   }
   ngOnInit() {
   }
