@@ -7,6 +7,6 @@
   Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="nombre_usr" required="required" /><br>
   Numero Tarjeta<input type="text" [(ngModel)]="data_numero_tarjeta" name="u" placeholder="data_numero_tarjeta" required="required" /><br>
   <input type="button" value="Aceptar Cambios" class="btn btn-primary btn-block" (click)="update($event)" />
-
+  <input type="button" value="Añadir Tarjeta" class="btn btn-primary btn-block" routerLink="/agregar_tarjeta" />
 
 </div>

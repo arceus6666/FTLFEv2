@@ -19,6 +19,7 @@ import { VisualizacionResultadosService } from './visualizacion-resultados.servi
   <td>{{dataTest.anio_cancion}}</td>
   <td>{{dataTest.ranking_personal}}</td> 
   <td>{{dataTest.url_cancion}}</td>
+  <input type="button" value="obtener" />
   </tr>
   </table>
 </div>`

@@ -1,3 +1,8 @@
-<p>
-  agregar-tarjeta works!
-</p>
+  ID - User<input type="text" [(ngModel)]="data_id" name="u" placeholder="Ej.: 1" required="required" /><br>
+  Numero Tarjeta<input type="text" [(ngModel)]="data_nro_tarjeta" name="u"  required="required" /><br>
+  CVC Tarjeta<input type="text" [(ngModel)]="data_cvc_tarjeta" name="u"  required="required" /><br>
+  Fecha Vencimiento Tarjeta<input type="text" [(ngModel)]="data_fecha_vencimiento_tarjeta" name="u"  required="required" /><br>
+  Tipo Tarjeta<input type="text" [(ngModel)]="data_tipo_tarjeta" name="u"  required="required" /><br>
+  Pais Tarjeta<input type="text" [(ngModel)]="data_pais_tarjeta" name="u"  required="required" /><br>
+  Nombre UsuarioTarjeta<input type="text" [(ngModel)]="data_nombre_usuario_tarjeta" name="u"  required="required" /><br>
+  <input type="button" value="Crear Tarjeta" class="btn btn-primary btn-block" (click)="save($event)" />

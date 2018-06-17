@@ -18,9 +18,9 @@ import { IniciarSesionService } from './iniciar-sesion/iniciar_sesion.service';
 import { AgregarTarjetaComponent } from './agregar-tarjeta/agregar-tarjeta.component';
 import { VisualizacionResultadosComponent } from './visualizacion-resultados/visualizacion-resultados.component';
 import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.component';
-import {GlobalService} from './global.service';
 import { VisualizacionResultadosService } from './visualizacion-resultados/visualizacion-resultados.service';
 import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service';
+import { AgregarTarjetaService } from './agregar-tarjeta/agregar-tarjeta.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service
     WelcomeComponent,
     PlaylistsComponent,
     AgregarTarjetaComponent,
-
     VisualizacionResultadosComponent,
     MostrarCancionComponent
   ],
@@ -76,12 +75,14 @@ import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service
       {
         path:'visualizacion_resultados',
         component:VisualizacionResultadosComponent
+      },
+      {
+        path:'agregar_tarjeta',
+        component:AgregarTarjetaComponent
       }
-
     ])
   ],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,
-    PlaylistsService,IniciarSesionService, GlobalService,MostrarCancionService,VisualizacionResultadosService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,VisualizacionResultadosService,AgregarTarjetaService],
   bootstrap: [AppComponent]
 
 })
