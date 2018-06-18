@@ -41,7 +41,6 @@ export class IniciarSesionComponent implements OnInit {
     );
 
     //this.global.saveLog(this.dataTest.id);
-
   }
 
   ngOnInit() {

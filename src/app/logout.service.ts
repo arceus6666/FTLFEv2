@@ -4,34 +4,30 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from "rxjs/internal/Observable";
 import { GlobalService } from './global.service';
 
-
 @Injectable()
 export class LogoutService {
 
   constructor(
     private http: Http,private global: GlobalService) {}
 
-  cerrarSesion() {
-    console.log('cerrarSesion called')
-    let url = `http://localhost:8000/FlameTuneLibrary/usuarios/logout/${this.global.getName()}`;
-    let data = '';
+  cerrarSesion(name) {
+    console.log('cerrarSesion called de: '+name)
+    let url = `http://localhost:8000/FlameTuneLibrary/usuarios/logout/${name}`;
+    let data = url;
+    console.log(url)
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    //headers.append('Access-Control-Allow-Origin', '*');
     
     let requestOptions = new RequestOptions({
-      method: RequestMethod.Get,
+      method: RequestMethod.Put,
       url: url,
       headers: headers,
       body: data
     });
-
-    return this.http.get(url,requestOptions);
+    return this.http.put(url,requestOptions);
   }
 
   ngOnInit(){
   }
-
-
 }

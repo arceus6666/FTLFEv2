@@ -10,14 +10,13 @@ import { LogoutService } from './logout.service';
 export class AppComponent {
   constructor(private global: GlobalService, private close: LogoutService){}
   title = 'app';
-
   clear(){
+    console.log('name:'+this.global.getName())
+    this.close.cerrarSesion(this.global.getName());
     this.global.clear();
-    this.close.cerrarSesion();
+    console.log(this.global.getID());
   }
-
   getLogged(){
     return this.global.getlog()
   }
-  
 }

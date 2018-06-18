@@ -10,13 +10,15 @@ export class IniciarSesionService {
     private http: Http) {}
 
   iniciarSesion(log): Observable<HttpResponse<any>> {
-    console.log('iniciarSesion called')
+    console.log('iniciarSesion called pre url')
     let url = `http://localhost:8000/FlameTuneLibrary/usuarios/login`;
     let data = log;
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    //headers.append('Access-Control-Allow-Origin', '*');
+    //aders.append('Access-Control-Allow-Origin', '*');
+    //headers.append('Access-Control-Allow-Headers','Content-Type');
+    //headers.append('Access-Control-Allow-Methods',' GET, POST, OPTIONS');
     let requestOptions = new RequestOptions({
       method: RequestMethod.Post,
       url: url,

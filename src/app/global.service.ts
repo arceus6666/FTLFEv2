@@ -11,7 +11,9 @@ var url_foto_usuario = null;
 var cantidad_membresias_usuario = null;
 var fecha_inicio_membresia_usuario = null;
 var numero_tarjeta = null;
-var logged = null;
+var logged = false;
+
+var songId = null;
 
 @Injectable()
 export class GlobalService {
@@ -19,10 +21,27 @@ export class GlobalService {
   constructor(
     private http: Http) {}
 
-  saveLog(id,mail,pass,name,url,cantidad,
-    fecha,numero,logged2) {
-      console.log('saving...')
-      console.log('id:'+id)
+  setSongId(id){
+    songId = id;
+  }
+  getSongId(){
+    return songId;
+  }
+  delSongId(){
+    songId = null;
+  }
+
+  saveLog(id,mail,pass,name,url,cantidad,fecha,numero,logged2) {
+    console.log('saving...')
+    console.log('id:'+id)
+    console.log('mail:'+mail)
+    console.log('pass:'+pass)
+    console.log('name:'+name)
+    console.log('url:'+url)
+    console.log('cantidad:'+cantidad)
+    console.log('fecha:'+numero)
+    console.log('logged'+logged)
+    console.log()
     id_usuario = id
     correo_usuario = mail
     password_usuario = pass
@@ -39,35 +58,35 @@ export class GlobalService {
   }
 
   getCorreo() {
-    return correo_usuario
+    return correo_usuario;
   }
 
   getPass() {
-    return password_usuario
+    return password_usuario;
   }
 
   getName() {
-    return nombre_usuario
+    return nombre_usuario;
   }
   
   getUrl() {
-    return url_foto_usuario
+    return url_foto_usuario;
   }
 
   getCantidad() {
-    return cantidad_membresias_usuario
+    return cantidad_membresias_usuario;
   }
 
   getFecha() {
-    return fecha_inicio_membresia_usuario
+    return fecha_inicio_membresia_usuario;
   }
 
   getNumero(){
-    return numero_tarjeta
+    return numero_tarjeta;
   }
 
   getlog() {
-    return logged
+    return logged;
   }
 
 
@@ -92,7 +111,8 @@ export class GlobalService {
     cantidad_membresias_usuario = null;
     fecha_inicio_membresia_usuario = null;
     numero_tarjeta = null;
-    logged = null;
+    logged = false;
+    songId = null;
   }
 
 }
