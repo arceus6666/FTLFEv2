@@ -1,0 +1,15 @@
+<div class="edit-playlist">
+
+
+  <h1>
+    Playlists
+  </h1>
+
+  <h2>Editar</h2>
+  ID<input type="text" [(ngModel)]="data_id" name="u" placeholder="Ej: 1" required="required" /><br>
+  Nuevo Nombre de lista<input type="text" [(ngModel)]="data_nombre_playlist" name="u" placeholder="Ej.: An awesome playlist " required="required" /><br>
+  Nuevo Acceso de lista<input type="text" [(ngModel)]="data_tipo_acceso_playlist" name="u" placeholder="Ej.: 'true' or 'false'" required="required" /><br>
+  <input type="button" value="Editar" class="btn btn-primary btn-block" (click)="update($event)" />
+
+  <br><br><br><br><br><br><br><br><br>
+</div>

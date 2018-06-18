@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { FormsModule} from '@angular/forms';
 import { BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
@@ -27,6 +27,12 @@ import { ComprarMembresiasComponent } from './comprar-membresias/comprar-membres
 import { ComprarMembresiaService } from './comprar-membresias/comprar-membresias.service';
 import { LogoutService } from './logout.service';
 import { MembresiasComponent } from './membresias/membresias.component';
+import { VisualizacionPlaylistsComponent } from './visualizar-playlists/visualizar-playlists.component';
+import {VisualizacionPlaylistsService} from "./visualizar-playlists/visualizar-playlists.service";
+import { EditPlaylistComponent } from './edit-playlist/edit-playlist.component';
+import {EditPlaylistService} from "./edit-playlist/edit-playlist.service";
+import { CreatePlaylistComponent } from './create-playlist/create-playlist.component';
+import {CreatePlaylistService} from "./create-playlist/create-playlist.service";
 
 @NgModule({
   declarations: [
@@ -41,7 +47,10 @@ import { MembresiasComponent } from './membresias/membresias.component';
     VisualizacionResultadosComponent,
     MostrarCancionComponent,
     ComprarMembresiasComponent,
-    MembresiasComponent
+    MembresiasComponent,
+    VisualizacionPlaylistsComponent,
+    EditPlaylistComponent,
+    CreatePlaylistComponent
   ],
   imports: [
     BrowserModule,
@@ -95,10 +104,21 @@ import { MembresiasComponent } from './membresias/membresias.component';
       }, {
         path:'membresias',
         component:MembresiasComponent
+      }, {
+        path:'visualizar_playlists',
+        component:VisualizacionPlaylistsComponent
+      }, {
+        path:'edit_playlist',
+        component:EditPlaylistComponent
+      }, {
+        path:'create_playlist',
+        component:CreatePlaylistComponent
       }
     ])
   ],
-  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService,ComprarMembresiaService,LogoutService],
+  providers: [RegistrarseService,EditarUsuarioService,MostrarUsuarioService,PlaylistsService,
+    IniciarSesionService,MostrarCancionService,GlobalService,VisualizacionResultadosService,AgregarTarjetaService,
+    ComprarMembresiaService,LogoutService,VisualizacionPlaylistsService, EditPlaylistService, CreatePlaylistService],
   bootstrap: [AppComponent]
 
 

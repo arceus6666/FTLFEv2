@@ -1,0 +1,18 @@
+
+
+<h1>Playlist</h1>
+
+<input type="button2" value="Obtener" class="btn btn-primary btn-block" (click)="get($event)" />
+<button class="btn btn-primary btn-block"><a routerLink="/create_playlist">Crear</a></button>
+
+<br><br>  Results  <br>
+<table class="table">
+  <tr *ngFor="let dataTest of dataTest; let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{dataTest.nombre_playlist}}</td>
+    <td>{{dataTest.tipo_acceso_playlist}}</td>
+    <button class="button2"><a routerLink="/edit_playlist">Edit</a></button>
+    <button class="button2" (click)="delete($event,dataTest.id_playlist)"><a routerLink="/visualizar_playlist">Delete</a></button>
+  </tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br>
