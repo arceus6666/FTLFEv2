@@ -1,12 +1,16 @@
-<div class="registrarse">
-  <h1>Editar Profile</h1>
+<body class="edit">
+  <h1 class="else">Editar Profile</h1>
   <!--ID<input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" /><br-->
 
   UserPicture<input type="text" [(ngModel)]="data_url_foto_usr" name="u" placeholder="Ej.: https://justalink.png"/><br>
   Correo<input type="text" [(ngModel)]="data_correo" name="u" placeholder="correo" required="required" /><br>
   Password<input type="password" [(ngModel)]="data_password" name="u" placeholder="password" required="required" /><br>
-  Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="nombre_usr" required="required" /><br>
-  <input type="button" value="Aceptar Cambios" class="btn btn-primary btn-block" (click)="update($event)" />
-  <input type="button" value="Añadir Tarjeta" class="btn btn-primary btn-block" routerLink="/agregar_tarjeta" />
+  Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="nombre_usr" required="required" />
 
-</div>
+  <br><br>
+  <button type="button" value="Aceptar Cambios" class="button" onclick="alert('Changes Saved!')" (click)="update($event)" >
+  <a class="colorwhite" routerLink="/mostrar_usuario">Aceptar Cambios</a>
+  </button>
+  <input type="button" value="Añadir Tarjeta" class="button colorwhite" routerLink="/agregar_tarjeta" />
+
+</body>

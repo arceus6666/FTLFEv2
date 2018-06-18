@@ -3,16 +3,16 @@
 
 
 <div class="topnav">
-  <div class="title topnava1">
-    <div *ngIf="!getLogged(); else notLogged">
-      <a class="topnava1" routerLink="/welcome">FlameTuneLibrary</a>
+  <div class="topnava1 backcol2">
+    <div class=" backcol2" *ngIf="!getLogged(); else notLogged">
+      <a class="colorwhite" routerLink="/welcome">FlameTuneLibrary</a>
     </div>
     <ng-template #notLogged>
-        <a class="topnava1">FlameTuneLibrary</a>
+        <a>FlameTuneLibrary</a>
     </ng-template>
   </div>
 
-  <div *ngIf="getLogged()">    
+  <div *ngIf="getLogged()">
     <a class="topnava2" routerLink="/welcome" onclick="alert('Bye Bye!!!')" (click)="clear()">Cerrar Sesion</a>
   </div>
   <div *ngIf="!getLogged()">

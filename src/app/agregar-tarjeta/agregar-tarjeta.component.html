@@ -1,7 +1,16 @@
-  Numero Tarjeta<input type="text" [(ngModel)]="data_nro_tarjeta" name="u"  required="required" /><br>
-  CVC Tarjeta<input type="text" [(ngModel)]="data_cvc_tarjeta" name="u"  required="required" /><br>
-  Fecha Vencimiento Tarjeta<input type="text" [(ngModel)]="data_fecha_vencimiento_tarjeta" name="u"  required="required" /><br>
-  Tipo Tarjeta<input type="text" [(ngModel)]="data_tipo_tarjeta" name="u"  required="required" /><br>
-  Pais Tarjeta<input type="text" [(ngModel)]="data_pais_tarjeta" name="u"  required="required" /><br>
-  Nombre UsuarioTarjeta<input type="text" [(ngModel)]="data_nombre_usuario_tarjeta" name="u"  required="required" /><br>
-  <input type="button" value="Crear Tarjeta" class="btn btn-primary btn-block" (click)="save($event)" />
+<body class="tarj">
+<h1 class="else">Añadir nueva Tarjeta</h1>
+  Numero Tarjeta<br>
+  <input type="text" [(ngModel)]="data_nro_tarjeta" name="u"  required="required" /><br>
+  CVC Tarjeta<br>
+  <input type="text" [(ngModel)]="data_cvc_tarjeta" name="u"  required="required" /><br>
+  Fecha Vencimiento Tarjeta<br>
+  <input type="text" [(ngModel)]="data_fecha_vencimiento_tarjeta" name="u"  required="required" /><br>
+  Tipo Tarjeta<br>
+  <input type="text" [(ngModel)]="data_tipo_tarjeta" name="u"  required="required" /><br>
+  Pais Tarjeta<br>
+  <input type="text" [(ngModel)]="data_pais_tarjeta" name="u"  required="required" /><br>
+  Nombre UsuarioTarjeta<br>
+  <input type="text" [(ngModel)]="data_nombre_usuario_tarjeta" name="u"  required="required" /><br>
+  <button type="button" value="Crear Tarjeta" class="btn btn-primary btn-block" onclick="alert('New card saved!!!')"(click)="save($event)"> </button>
+</body>

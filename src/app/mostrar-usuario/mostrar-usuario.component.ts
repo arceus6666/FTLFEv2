@@ -4,19 +4,8 @@ import { GlobalService } from '../global.service'
 
 @Component({
   selector: 'app-mostrar-usuario',
-  template: `<div class="login">
-  <h1>MyProfile</h1>
-  <!--name<input type="text" [(ngModel)]="data_id" name="u" placeholder="id" required="required" /-->
-  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="set()" />
-  <br>Usuario  <br>
-  <br>Nombre: {{dataTest.nombre_usr}}
-  <br>Correo: {{dataTest.correo}}
-  <br>UserPicture: <img src="{{dataTest.url_foto_usr}}">
-  <br>Cantidad Membresias: {{dataTest.cantidad_membresias}}
-  <br>Fecha Inicio Membresias: {{dataTest.fecha_inicio_membresia}}
-  <br>Numero Tarjeta: {{dataTest.numero_tarjeta}}
-  <br><br><button class="button"><a class="colorwhite" routerLink="/editar_usuario">Editar</a></button>
-</div>`
+  templateUrl: './mostrar-usuario.component.html',
+  styleUrls: ['./mostrar-usuario.component.css']
 })
 export class MostrarUsuarioComponent implements OnInit {
 

@@ -1,13 +1,17 @@
-<body class="reg">
+<body class="reg" xmlns="http://www.w3.org/1999/html">
 
 <div class="iniciar_sesion">
   <div class="imglines">
     <img src="http://i1278.photobucket.com/albums/y518/TaurineSGH/FlameTuneLibrary/background4_zps34rmos67.gif">
     <p>Espanglish is el new hit del year!!! :v<br>That's why si tu can entender this<br>you puedes sign in tambien!</p>
   </div>
-  <h1>Iniciar Sesion</h1>
-  Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="Usuario" required="required" /><br>
-  Password<input type="text" [(ngModel)]="data_password" name="u" placeholder="Password" required="required" /><br>
-  <input type="button" value="Iniciar Sesion" class="btn btn-primary btn-block" (click)="iniciar($event, this.data_nombre_usr,this.data_password)" routerLink="/mostrar_usuario"/>
+  <h1>Iniciar Sesion</h1><br>
+  Nombre de Usuario<br>
+  <input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="nombre_usr" required="required" /><br>
+  Password<br>
+  <input type="password" [(ngModel)]="data_password" name="u" placeholder="password" required="required" /><br>
+  <button type="button" value="Iniciar Sesion" class="buttonlog" (click)="iniciar($event, this.data_nombre_usr,this.data_password)">
+    <a class="topnava2" routerLink="/mostrar_usuario">Iniciar sesion</a>
+  </button>
 </div>
 </body>

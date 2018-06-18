@@ -38,13 +38,36 @@ body.memb {
 }
 
 body.bus {
-  margin: 0;
+  margin: 100px;
   background-image: url("resources\skullflame.gif");
+  font-family: verdana;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-attachment: fixed;
+}
+
+body.edit {
+  margin: 100px;
+  background-image: url("resources\background5.gif");
   font-family: verdana;
   background-repeat: no-repeat;
   background-position: top right;
 }
 
+body.profi {
+  margin: 100px;
+  background-image: url("resources\background13.gif");
+  font-family: verdana;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+body.tarj{
+  margin: 100px;
+  background-image: url("resources\background6.gif");
+  font-family: verdana;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
 
 body.comp {
   margin: 0;
@@ -77,7 +100,7 @@ h4.wel{
 .topnav {
   overflow: hidden;
   background-color: #333;
-  height: 30px;
+
 }
 
 /*PARA NAVIGATION BAR*/
@@ -87,7 +110,7 @@ h4.wel{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 0px 10px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
 }
@@ -99,7 +122,7 @@ h4.wel{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 0px 10px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
 }
@@ -178,6 +201,12 @@ h4.wel{
 
 h1.log {
   text-align: center;
+  color: white;
+  font-size: 45px;
+}
+
+h1.else {
+  text-align: left;
   color: white;
   font-size: 45px;
 }
@@ -277,3 +306,20 @@ input[type=submit]:hover {
 .inv {
   display: none;
 }
+
+.backcol {
+  background-color: #333;
+  border: none;
+}
+
+.backcol2 {
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+}
+
+.backcol2 a:hover{
+  background-color: cornflowerblue;
+  color: black;
+}
+
