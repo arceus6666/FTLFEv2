@@ -15,7 +15,6 @@ export class MostrarCancionService {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
       headers.append('Accept', 'application/json');
-
       let requestOptions = new RequestOptions({
         method: RequestMethod.Get,
         url: url,
