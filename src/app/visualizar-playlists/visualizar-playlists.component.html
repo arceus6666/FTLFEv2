@@ -11,8 +11,10 @@
     <td>{{i + 1}}</td>
     <td>{{dataTest.nombre_playlist}}</td>
     <td>{{dataTest.tipo_acceso_playlist}}</td>
-    <button class="button2"><a routerLink="/edit_playlist">Edit</a></button>
-    <button class="button2" (click)="delete($event,dataTest.id_playlist)"><a routerLink="/visualizar_playlist">Delete</a></button>
+    <button class="button2"><a routerLink="/edit_playlist" (click)="save(i)">Edit</a></button>
+    <button class="button2" (click)="delete($event,dataTest.id_playlist)">
+      <a routerLink="/visualizar_playlist">Delete</a>
+    </button>
   </tr>
 </table>
 <br><br><br><br><br><br><br><br><br><br>

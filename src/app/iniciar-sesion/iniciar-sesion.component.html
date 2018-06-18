@@ -6,7 +6,7 @@
     </div>
     <h1>Iniciar Sesion</h1>
     Nombre de Usuario<input type="text" [(ngModel)]="data_nombre_usr" name="u" placeholder="Usuario" required="required" /><br>
-    Password<input type="text" [(ngModel)]="data_password" name="u" placeholder="Password" required="required" /><br>
+    Password<input type="password" [(ngModel)]="data_password" name="u" placeholder="Password" required="required" /><br>
     <input type="button" value="Iniciar Sesion" class="btn btn-primary btn-block" (click)="iniciar($event, this.data_nombre_usr,this.data_password)" routerLink="/mostrar_usuario"/>
   </div>
 </body>

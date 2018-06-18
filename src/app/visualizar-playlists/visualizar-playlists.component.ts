@@ -36,6 +36,11 @@ export class VisualizacionPlaylistsComponent implements OnInit {
     );
   }
 
+  save(i){
+    this.global.setPlId(this.dataTest[i].id_playlist)
+  }
+
+
   delete(event,id_playlist) {
     event.preventDefault();
     this.serviciod.deletePlaylist(id_playlist);

@@ -15,6 +15,7 @@ var logged = false;
 
 var songId = null;
 
+var playlistId = null;
 @Injectable()
 export class GlobalService {
 
@@ -29,6 +30,17 @@ export class GlobalService {
   }
   delSongId(){
     songId = null;
+  }
+
+  setPlId(id){
+    playlistId = id;
+  }
+
+  getPlId(){
+    return playlistId;
+  }
+  delPlId(){
+    playlistId=null;
   }
 
   saveLog(id,mail,pass,name,url,cantidad,fecha,numero,logged2) {
@@ -113,6 +125,7 @@ export class GlobalService {
     numero_tarjeta = null;
     logged = false;
     songId = null;
+    playlistId = null;
   }
 
 }

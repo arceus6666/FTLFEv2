@@ -23,7 +23,6 @@ export class VisualizacionResultadosService {
         headers: headers,
         body: data
       });
-      // TODO 
       // this.global.setSongId();
       return this.http.get(url,{observe:'response'});
     }
