@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
-import{FormsModule} from '@angular/forms';
-import {BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
+import { RouterModule} from '@angular/router';
+import { FormsModule} from '@angular/forms';
+import { BaseRequestOptions, HttpModule, RequestOptions, Headers} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
@@ -21,7 +22,7 @@ import { MostrarCancionComponent } from './mostrar-cancion/mostrar-cancion.compo
 import { VisualizacionResultadosService } from './visualizacion-resultados/visualizacion-resultados.service';
 import { MostrarCancionService } from './mostrar-cancion/mostrar-cancion.service';
 import { AgregarTarjetaService } from './agregar-tarjeta/agregar-tarjeta.service';
-import {GlobalService}from './global.service';
+import { GlobalService }from './global.service';
 import { ComprarMembresiasComponent } from './comprar-membresias/comprar-membresias.component'
 import { ComprarMembresiaService } from './comprar-membresias/comprar-membresias.service';
 import { LogoutService } from './logout.service';
@@ -44,6 +45,7 @@ import { MembresiasComponent } from './membresias/membresias.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([

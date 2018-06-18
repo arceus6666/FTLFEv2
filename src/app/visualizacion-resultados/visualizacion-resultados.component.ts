@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VisualizacionResultadosService } from './visualizacion-resultados.service';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-visualizacion-resultados',
@@ -18,12 +19,10 @@ export class VisualizacionResultadosComponent implements OnInit {
   data_url_cancion:any;
   CancionData:any=[];
   dataTest:any=[];
-  constructor(private serviciod: VisualizacionResultadosService)
-  {
-  }
+  constructor(private serviciod: VisualizacionResultadosService, private global: GlobalService){}
 
   cx = 'ss';
-  get(event, id_cancion) {
+  get(id_cancion) {
     this.serviciod.getBusqueda(id_cancion).subscribe(
       res => {
         console.log(res);
@@ -32,6 +31,18 @@ export class VisualizacionResultadosComponent implements OnInit {
         console.log('body '+this.dataTest);
       }
     );
+  }
+
+  save(i){
+    /*
+    for(var x in this.dataTest) {
+      //x is index in dt
+      for(var xx in this.dataTest[x]) {
+        console.log('xx:'+xx+' in dt:'+this.dataTest[x][xx])
+      }
+    }
+    */
+    this.global.setSongId(this.dataTest[i].id_cancion)
   }
 
 

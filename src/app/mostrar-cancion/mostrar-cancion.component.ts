@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MostrarCancionService } from './mostrar-cancion.service';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-mostrar-cancion',
   template: `<div class="login">
   <h1 class="wel">Cancion</h1>
-  ID<input type="text" [(ngModel)]="data_id_cancion" name="u" placeholder="id_cancion" required="required" />
-  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get($event, this.data_id_cancion)" />
+  <input type="button" value="obtener" class="btn btn-primary btn-block" (click)="get()" />
   <br>  Cancion  <br>
   <br>Id Cancion : {{dataTest.id_cancion}}
   <br>Nombre Cancion: {{dataTest.nombre_cancion}}
@@ -29,13 +29,10 @@ export class MostrarCancionComponent implements OnInit {
   data_url_cancion:any;
   CancionData:any=[];
   dataTest:any=[];
-  constructor(private serviciod: MostrarCancionService)
-  {
-  }
+  constructor(private serviciod: MostrarCancionService, private global: GlobalService){}
 
-  cx = 'ss';
-  get(event, id_cancion) {
-    this.serviciod.getCancion(id_cancion).subscribe(
+  get() {
+    this.serviciod.getCancion(this.global.getSongId()).subscribe(
       res => {
         console.log(res);
         console.log('data response body'+ res['_body']);

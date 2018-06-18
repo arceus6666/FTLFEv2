@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http, RequestMethod, RequestOptions} from '@angular/http';
+import {Headers, Http, RequestMethod, RequestOptions, Request} from '@angular/http';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Observable} from "rxjs/internal/Observable";
 
@@ -20,8 +20,8 @@ export class IniciarSesionService {
     //headers.append('Access-Control-Allow-Headers','Content-Type');
     //headers.append('Access-Control-Allow-Methods',' GET, POST, OPTIONS');
     let requestOptions = new RequestOptions({
-      method: RequestMethod.Post,
       url: url,
+      method: RequestMethod.Post,
       headers: headers,
       body: data
     });
