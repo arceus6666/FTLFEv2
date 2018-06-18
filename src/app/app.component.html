@@ -13,7 +13,7 @@
   </div>
 
   <div *ngIf="getLogged()">
-    <a class="topnava2" routerLink="/welcome" (click)="clear()">Cerrar Sesion</a>
+    <a class="topnava2" routerLink="/welcome" (click)="clear()" onclick="alert('Bye Bye!!!')">Cerrar Sesion</a>
   </div>
   <div *ngIf="!getLogged()">
     <a class="topnava2" routerLink="/registrarse">Registrarse</a>
@@ -25,7 +25,7 @@
     <a class="topnava2" routerLink="/mostrar_usuario">Mi Perfil</a>
   </div>
   <div *ngIf="getLogged()">
-    <a class="topnava2" routerLink="/playlists">Playlists</a>
+    <a class="topnava2" routerLink="/visualizar_playlists">Playlists</a>
   </div>
   <div *ngIf="getLogged()">
     <a class="topnava2" routerLink="/visualizacion_resultados">Busqueda</a>
